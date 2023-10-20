@@ -6,7 +6,6 @@ function findRotationCount(arr) {
         mid = Math.floor((min + max) / 2);
 
         if (findStart(arr[min], arr[mid], arr[max]) == 0) {
-            console.log(arr[mid - 1], arr[mid], arr[mid + 1])
             if (arr[mid - 1] > arr[mid] && arr[mid] < arr[mid + 1]) {
                 return mid;
             }
@@ -22,10 +21,6 @@ function findRotationCount(arr) {
     return min;
 
 }
-
-findRotationCount([15, 18, 2, 3, 6, 12]) // 2
-findRotationCount([7, 9, 11, 12, 5]) // 4
-findRotationCount([7, 9, 11, 12, 15]) // 0
 
 //this function will return -1 if the start of the array is left of the midpoint,
 //                          0 if the start of the array is potentially at the midpoint,  
